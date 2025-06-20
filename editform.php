@@ -1,7 +1,20 @@
 <?php
 include('inc.header.php');
 $name=$email=$address=$gender=$phone=$nameError=$emailError=$phoneError=$img="";
-if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])){
+if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['editid'])) {
+    $editid = $_GET['editid'];
+    $sql = "SELECT * FROM student_inquiry WHERE id='$editid'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $name = $row['name'];
+        $email = $row['email'];
+        $address = $row['Address'];
+        $gender = $row['gender'];
+        $phone = $row['Phone'];
+    }
+} 
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_btn'])){
     if(empty($_POST['name'])) {
         $nameError = 'Name is required';
     } else {
@@ -49,9 +62,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])){
     }
 }
 }
-
 ?>
-
 <!-- MAIN CONTENT-->
 <div class="main-content">
     <div class="section__content section__content--p30">
@@ -61,11 +72,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])){
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                        <h1 class="text-center">ADD STUDENTS</h1>
+                            <strong>Edit Student </strong> Elements
                         </div>
                         <div class="card-body card-block">
 
-                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <form action="view.php" method="post" enctype="multipart/form-data" class="form-horizontal">
     <div class="row form-group">
         <div class="col col-md-3">
             <label for="name" class="form-control-label">Name</label>
@@ -123,7 +134,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])){
     
     <div class="row form-group">
         <div class="col col-md-3">
-            <label for="imgfile" class="form-control-label">Student Form</label>
+            <label for="imgfile" class="form-control-label">Product Icon</label>
         </div>
         <div class="col-12 col-md-9">
             <input type="file" id="imgfile" name="imgfile" class="form-control-file">
@@ -134,7 +145,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])){
     <div class="row form-group">
         <div class="col col-md-3"></div>
         <div class="col-12 col-md-9">
-            <button type="submit" name="save_btn" class="btn btn-success">Submit</button>
+            <button type="submit" name="update_btn" class="btn btn-success">Submit</button>
         </div>
     </div>
 </form>
