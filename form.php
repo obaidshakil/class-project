@@ -123,7 +123,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])){
     
     <div class="row form-group">
         <div class="col col-md-3">
-            <label for="imgfile" class="form-control-label">Student Form</label>
+            <label for="imgfile" class="form-control-label">Student Picture</label>
         </div>
         <div class="col-12 col-md-9">
             <input type="file" id="imgfile" name="imgfile" class="form-control-file">
