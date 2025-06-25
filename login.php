@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['loginBtn'])) {
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="#"><img src="images/icon/logo.jpg" alt="CoolAdmin" width="80px"></a>
+                            <a href="#"><img src="images/icon/logo1.jpg" alt="CoolAdmin" width="80px"></a>
                         </div>
                         <div class="login-form">
                             <form action="" method="post">

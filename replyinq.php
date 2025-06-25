@@ -8,13 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['replyid'])) {
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 }
-$sql = "SELECT * FROM admin";
-$result = mysqli_query($conn, $sql);
+// $sql = "SELECT * FROM admin";
+// $result = mysqli_query($conn, $sql);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])) {
     $replyid = safe_input($_POST['replyid']);
     $reply_message = safe_input($_POST['reply_message']);
-    $admin_id = safe_input($_POST['admin_id']);
+    $admin_id = safe_input($_SESSION['user_id']);
     $inquiry_status = safe_input($_POST['inquiry-status']);
 
     $sql = "UPDATE inquiry 
@@ -49,16 +49,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])) {
                                     <div class="col col-md-3">
                                         <label for="admin_id" class="form-control-label">Select Admin</label>
                                     </div>
-                                    <div class="col-12 col-md-9">
+                                    <!-- <div class="col-12 col-md-9">
                                         <select name="admin_id" id="admin_id" class="form-control" required>
                                             <option value="">Select Admin</option>
                                             <?php while ($admin = mysqli_fetch_assoc($result)) { ?>
                                                 <option value="<?php echo $admin['id']; ?>">
-                                                    <?php echo $admin['name']; ?>
+                                                    <?php echo $admin['role']; ?>
                                                 </option>
                                             <?php } ?>
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 
