@@ -7,7 +7,7 @@ include('inc.functions.php');
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "my_db";
+$database = "mydb1";
 
 // create connection
 $conn = mysqli_connect($hostname,$username,$password,$database);

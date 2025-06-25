@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])){
     $sql = "INSERT INTO student_inquiry (name, email, Address, Phone ,gender,photo) VALUES ('$name', '$email', '$address', '$phone','$gender','$img')";
 
     if($isinserted = mysqli_query($conn, $sql)){
-        header('Location: view.php');
+        header('Location: form.php');
         exit();
     }
 }
@@ -123,7 +123,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])){
     
     <div class="row form-group">
         <div class="col col-md-3">
-            <label for="imgfile" class="form-control-label">Student Picture</label>
+            <label for="imgfile" class="form-control-label">Student Form</label>
         </div>
         <div class="col-12 col-md-9">
             <input type="file" id="imgfile" name="imgfile" class="form-control-file">

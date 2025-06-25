@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])) {
                                             <option value="">Select Admin</option>
                                             <?php while ($admin = mysqli_fetch_assoc($result)) { ?>
                                                 <option value="<?php echo $admin['id']; ?>">
-                                                    <?php echo $admin['role']; ?>
+                                                    <?php echo $admin['name']; ?>
                                                 </option>
                                             <?php } ?>
                                         </select>

@@ -71,35 +71,38 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo1.jpg" alt="Cool Admin" width="80px" height="100px"/>
+                    <img src="images/icon/logo.jpg" alt="Cool Admin" width="80px" height="100px"/>
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                               <i class="fas fa-graduation-cap"></i>STUDENT PANEL</a>
+                            <a class="js-arrow" href="">
+
                             
                                 
                             
                         </li>
                        
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Students Forms</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                               <li>
-                                    <a href="form.php"><i class="bi bi-person-plus-fill"></i>
-                                        Add Student Details</a>
-                               
-                                <li>
-                                    <a href="inquiryform.php"><i class="bi bi-person-lines-fill"></i>
-                                        Std Inquiry</a>
-                               
-                               
-                            </ul>
-                        </li>
+                      <li class="has-sub">
+    <a class="js-arrow" href="#">
+        <i class="fas fa-copy"></i> Students Forms
+    </a>
+    <ul class="list-unstyled navbar__sub-list js-sub-list">
+        <li>
+            <a href="form.php">
+                <i class="bi bi-person-plus-fill"></i> Add Student Details
+            </a>
+        </li>
+        <li>
+            <a href="inquiryform.php">
+                <i class="bi bi-person-lines-fill"></i> Std Inquiry
+            </a>
+        </li>
+       
+    </ul>
+</li>
                        
                     </ul>
                 </nav>

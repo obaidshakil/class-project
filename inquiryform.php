@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_btn'])) {
 
     $sql = "INSERT INTO inquiry (std_id, message, inquiry_status) VALUES ('$stdid', '$message', '$inquiry_status')";
     if($isinserted = mysqli_query($conn, $sql)) {
-        header('Location: viewinq.php');
+        header('Location: inquiryform.php');
         exit();
     } 
 }   

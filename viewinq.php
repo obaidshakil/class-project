@@ -20,7 +20,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['deleteid'])) {
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-center mb-4">All Student Inquiries</h1>
-                    <a href="inquiryform.php" class="btn btn-primary">Create New Inquiry</a>
                     <br>
                     <div class="table-responsive table--no-card m-b-30">
                         <table class="table table-borderless table-striped table-earning">
