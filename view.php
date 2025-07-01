@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['deleteid'])){
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="table-responsive table--no-card m-b-30">
-                                    <h1 class="text-center">ADD STUDENTS</h1>
+                                    <h1 class="text-center">View STUDENTS</h1>
                                  <a href="form.php" type="button" class="btn btn-primary mb-3">+ ADD STUDENTS</a>
         <table class="table table-borderless table-striped table-earning">
             <thead>
